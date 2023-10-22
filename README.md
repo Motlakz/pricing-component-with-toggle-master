@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://pricing-component-with-toggle-master)
+- Live Site URL: [Pricing Component](https://www.motlakz.github.io/pricing-component-with-toggle-master)
 
 ## My process
 
