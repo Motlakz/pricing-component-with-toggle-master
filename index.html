@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+  <h2>Our Pricing</h2>
+  <span>Monthly</span>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <span>Annually</span>
+
+  <div class="cards annual">
+    <div class="card first">
+        <h4>Basic</h4>
+        <div class="price annual">
+          <h1 class="amount">&dollar;199.99</h1>
+          <span class="interval">/year</span>
+        </div>
+        <div class="price monthly">
+          <h1 class="amount">&dollar;19.99</h1>
+          <span class="interval">/month</span>
+        </div>
+      
+        <hr>
+      
+        <a href="#" id="">500 GB Storage </a>
+      
+        <hr>
+      
+        <a href="#" id="">2 Users Allowed</a>
+      
+        <hr>
+      
+        <a href="#" id="">Send up to 3 GB</a>
+      
+        <hr>
+      
+        <button type="button">LEARN MORE</button>
+    </div>
+    
+    <div class="card middle">
+      <h4>Professional</h4>
+      <div class="price annual">
+        <h1 class="amount">&dollar;249.99</h1>
+        <span class="interval">/year</span>
+      </div>
+      <div class="price monthly">
+        <h1 class="amount">&dollar;24.99</h1>
+        <span class="interval">/month</span>
+      </div>
+
+      <hr>
+
+      <a href="#" id="">1 TB Storage </a>
+
+      <hr>
+
+      <a href="#" id="">5 Users Allowed</a>
+
+      <hr>
+
+      <a href="#" id="">Send up to 10 GB</a>
+
+      <hr>
+
+      <button type="button">LEARN MORE</button>
+    </div>
+
+    <div class="card last">
+      <h4>Master</h4>
+      <div class="price annual">
+        <h1 class="amount">&dollar;399.99</h1>
+        <span class="interval">/year</span>
+      </div>
+      <div class="price monthly">
+        <h1 class="amount">&dollar;39.99</h1>
+        <span class="interval">/month</span>
+      </div>
+
+      <hr>
+
+      <a href="#" id="">2 TB Storage </a>
+
+      <hr>
+
+      <a href="#" id="">10 Users Allowed</a>
+
+      <hr>
+
+      <a href="#" id="">Send up to 20 GB</a>
+
+      <hr>
+
+      <button type="button">LEARN MORE</button>
+    </div>
+  </div>
+
+</main>
+<script>
+  const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+  const monthlyPrices = document.querySelectorAll('.price.monthly');
+  const annualPrices = document.querySelectorAll('.price.annual');
+
+  toggleSwitch.checked = true;
+
+  toggleSwitch.addEventListener('change', function() {
+    if (toggleSwitch.checked) {
+      monthlyPrices.forEach(monthlyPrice => {
+        monthlyPrice.classList.remove('annual');
+        monthlyPrice.classList.add('monthly');
+        monthlyPrice.style.display = "none";
+      });
+      annualPrices.forEach(annualPrice => {
+        annualPrice.classList.add('annual');
+        annualPrice.classList.remove('monthly');
+        annualPrice.style.display = "block";
+      });
+    } else {
+      monthlyPrices.forEach(monthlyPrice => {
+        monthlyPrice.classList.add('annual');
+        monthlyPrice.classList.remove('monthly');
+        monthlyPrice.style.display = "block";
+      });
+      annualPrices.forEach(annualPrice => {
+        annualPrice.classList.add('monthly');
+        annualPrice.classList.remove('annual');
+        annualPrice.style.display = "none";
+      });
+    }
+  });
+</script>
+  <footer class="footer">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Motlalepula Sello</a>.
+  </footer>
+</body>
+</html>
